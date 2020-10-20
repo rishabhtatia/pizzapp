@@ -1,0 +1,42 @@
+.ListComponent{
+    text-align: center;
+	background-color: #e61a39;
+	width: 615px;
+	border-radius: 15px;
+    padding: 30px 0;
+}
+
+.Name {
+	color: white;
+	font-size: 30px;
+	font-weight: 100;
+	margin: 20px 0 10px 0;
+}
+
+.Content {
+	color: white;
+	width: 375px;
+	font-weight: 100;
+	margin: 0 auto 0 auto;
+}
+
+.PricingText {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	margin: 10px 0;
+}
+
+.AddToCartButton {
+    border-radius: 10px;
+	display: block;
+	margin: 20px auto 0 auto;
+	padding: 10px 35px;
+	background-color: white;
+	color: #e61a39;
+	border: 1px solid #fff;
+	font-weight: 700;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialias
+}
