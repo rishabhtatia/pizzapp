@@ -1,7 +1,0 @@
-.pizzaContainer {
-	display: grid;
-	justify-items: center;
-	grid-template-columns: 50% 50%;
-	grid-gap: 15px 0;
-	margin: 0 0 15px 0;
-}
