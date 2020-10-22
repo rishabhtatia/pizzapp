@@ -7,9 +7,11 @@ const ListComponents = (props) => {
     return (
       <ListComponent
         name={item.name}
+        key={item.name}
         content={item.content}
         pricingText={item.pricingText}
-        modalopen={props.modalopen}
+        price={item.price}
+        OrderSummaryHandler={props.OrderSummaryHandler}
       />
     );
   });

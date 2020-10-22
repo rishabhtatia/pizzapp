@@ -2,7 +2,14 @@ import React from "react";
 import styles from "./ListComponent.module.css";
 const images = require.context("../../../assests/images", true);
 
-const ListComponent = ({ name, content, pricingText, modalopen }) => {
+const ListComponent = ({
+  name,
+  content,
+  pricingText,
+  price,
+  OrderSummaryHandler,
+}) => {
+  const data = { name: name, price: price };
   return (
     <div className={styles.ListComponent}>
       <img src={images(`./${name.replaceAll(" ", "_")}.jpg`)} alt={name} />
@@ -12,7 +19,7 @@ const ListComponent = ({ name, content, pricingText, modalopen }) => {
       <button
         type="button"
         className={styles.AddToCartButton}
-        onClick={modalopen}
+        onClick={() => OrderSummaryHandler(data)}
       >
         ADD TO CART
       </button>

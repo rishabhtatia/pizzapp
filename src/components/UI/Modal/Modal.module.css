@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   display: block;
-  background-color: aquamarine;
+  background-color: #095c91;
   align-items: center;
   width: 40%;
 }
@@ -24,7 +24,11 @@ th {
   font-size: 24px;
   background-color: honeydew;
 }
-.PlaceOrderButton {
+td {
+  background-color: #dff0d8;
+}
+
+.Button {
   border-radius: 10px;
   display: block;
   margin: 10px auto;
@@ -34,4 +38,15 @@ th {
   border: 1px solid #fff;
   font-weight: 700;
   font-size: 20px;
+}
+
+.CancelButton {
+  color: white;
+  width: 60%;
+  background-color: #e61a39;
+  padding: 6px 12px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 2px 0;
 }

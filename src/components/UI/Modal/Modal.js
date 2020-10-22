@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Modal.module.css";
-import Aux from "../../../hoc/Auxilary";
 
 const Modal = (props) => {
+  let orderList = props.orderSummary.slice();
+  const [orderSummary, setOrderSummary] = useState([...orderList]);
+  // const [TotalPrice, setTotalPrice] = useState(0);
+  let TotalPrice = orderList.reduce((sum, curr) => (sum = curr.price + sum), 0);
+  // const removePizza = (index) => {
+  //   const updateOrderSummary = orderSummary.splice(index, 1);
+  //   setOrderSummary(updateOrderSummary);
+  // };
   return (
     <div
       className={styles.Modal}
@@ -12,21 +19,32 @@ const Modal = (props) => {
       }}
     >
       <table>
-        <tr>
-          <th>Name</th>
-          <th>Action</th>
-          <th>Price</th>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Action</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orderList.map((item, index) => (
+            <tr key={item.name + index}>
+              <td>{item.name}</td>
+              <td>
+                <button className={styles.CancelButton}>X</button>
+              </td>
+              <td>{item.price}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
-      <button className={styles.PlaceOrderButton} type="submit">
+      <h3>TOTAL:: {TotalPrice}</h3>
+      <button className={styles.Button} type="submit">
         PLACE YOUR ORDER
       </button>
-      {/* {props.children} */}
+      <button className={styles.Button} onClick={() => props.setModal(false)}>
+        CLOSE CART
+      </button>
     </div>
   );
 };
