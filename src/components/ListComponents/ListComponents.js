@@ -6,11 +6,8 @@ const ListComponents = (props) => {
   let pizzaList = props.pizzaList.map((item) => {
     return (
       <ListComponent
-        name={item.name}
+        item={item}
         key={item.name}
-        content={item.content}
-        pricingText={item.pricingText}
-        price={item.price}
         OrderSummaryHandler={props.OrderSummaryHandler}
       />
     );

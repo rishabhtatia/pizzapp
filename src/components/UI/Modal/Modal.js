@@ -4,12 +4,7 @@ import styles from "./Modal.module.css";
 const Modal = (props) => {
   let orderList = props.orderSummary.slice();
   const [orderSummary, setOrderSummary] = useState([...orderList]);
-  // const [TotalPrice, setTotalPrice] = useState(0);
   let TotalPrice = orderList.reduce((sum, curr) => (sum = curr.price + sum), 0);
-  // const removePizza = (index) => {
-  //   const updateOrderSummary = orderSummary.splice(index, 1);
-  //   setOrderSummary(updateOrderSummary);
-  // };
   return (
     <div
       className={styles.Modal}
