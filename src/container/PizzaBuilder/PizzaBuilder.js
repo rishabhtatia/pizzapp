@@ -3,16 +3,24 @@ import pizzaListData from "../../constant/default";
 import ListComponents from "../../components/ListComponents/ListComponents";
 import Aux from "../../hoc/Auxilary";
 import Modal from "../../components/UI/Modal/Modal";
-const PizzaBuilder = (props) => {
-  const [pizzaList, setPizzaList] = useState(pizzaListData);
+
+const PIZZABUILDER = (props) => {
+  const [pizzaList] = useState(pizzaListData);
   const [isModalOpen, setModal] = useState(false);
-  let [orderSummary, setOrderSummary] = useState([]);
+  const [orderSummary, setOrderSummary] = useState([]);
+
+  const RemoveOrderSummaryHandler = (item) => {
+    const newState = orderSummary.filter((data) => data.key !== item.key);
+    setOrderSummary(newState);
+  };
 
   const OrderSummaryHandler = (data) => {
-    let newState = orderSummary.slice();
+    const newState = orderSummary.slice();
     newState.push({
       name: data.name,
-      action: "Hiii",
+      key:
+        "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0"),
+      action: RemoveOrderSummaryHandler,
       price: data.price,
     });
     setOrderSummary(newState);
@@ -21,10 +29,11 @@ const PizzaBuilder = (props) => {
 
   return (
     <Aux>
-      <h1 style={{ textAlign: "center" }}>Pizza Builder Component</h1>
-      <Modal show={isModalOpen} setModal={setModal} orderSummary={orderSummary}>
-        <div>CARTTTTTT</div>
-      </Modal>
+      <Modal
+        show={isModalOpen}
+        setModal={setModal}
+        orderSummary={orderSummary}
+      ></Modal>
       <ListComponents
         pizzaList={pizzaList}
         OrderSummaryHandler={OrderSummaryHandler}
@@ -33,4 +42,4 @@ const PizzaBuilder = (props) => {
   );
 };
 
-export default PizzaBuilder;
+export default PIZZABUILDER;

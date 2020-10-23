@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import styles from "./Modal.module.css";
 
-const Modal = (props) => {
-  let orderList = props.orderSummary.slice();
-  const [orderSummary, setOrderSummary] = useState([...orderList]);
-  let TotalPrice = orderList.reduce((sum, curr) => (sum = curr.price + sum), 0);
+const MODAL = (props) => {
+  const orderList = props.orderSummary.slice();
+  const TotalPrice = orderList.reduce((sum, curr) => curr.price + sum, 0);
   return (
     <div
       className={styles.Modal}
@@ -22,11 +22,17 @@ const Modal = (props) => {
           </tr>
         </thead>
         <tbody>
-          {orderList.map((item, index) => (
-            <tr key={item.name + index}>
+          {orderList.map((item) => (
+            <tr key={item.key}>
               <td>{item.name}</td>
               <td>
-                <button className={styles.CancelButton}>X</button>
+                <button
+                  type="button"
+                  className={styles.CancelButton}
+                  onClick={() => item.action(item)}
+                >
+                  X
+                </button>
               </td>
               <td>{item.price}</td>
             </tr>
@@ -37,11 +43,21 @@ const Modal = (props) => {
       <button className={styles.Button} type="submit">
         PLACE YOUR ORDER
       </button>
-      <button className={styles.Button} onClick={() => props.setModal(false)}>
+      <button
+        type="button"
+        className={styles.Button}
+        onClick={() => props.setModal(false)}
+      >
         CLOSE CART
       </button>
     </div>
   );
 };
 
-export default Modal;
+MODAL.propTypes = {
+  orderSummary: PropTypes.array,
+  show: PropTypes.bool,
+  setModal: PropTypes.func,
+};
+
+export default MODAL;

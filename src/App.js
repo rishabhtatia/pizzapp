@@ -3,7 +3,7 @@ import "./App.css";
 import Layout from "./components/Layout/Layout";
 import PizzaBuilder from "./container/PizzaBuilder/PizzaBuilder";
 
-function App() {
+const APP = () => {
   return (
     <div className="App">
       <Layout>
@@ -11,6 +11,6 @@ function App() {
       </Layout>
     </div>
   );
-}
+};
 
-export default App;
+export default APP;

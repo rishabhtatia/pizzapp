@@ -2,7 +2,7 @@ import React from "react";
 import Aux from "../../hoc/Auxilary";
 import styles from "./Layout.module.css";
 
-const layout = (props) => {
+const LAYOUT = (props) => {
   return (
     <Aux>
       <h1 className={styles.Heading}>PIZZA ORDER APP</h1>
@@ -11,4 +11,4 @@ const layout = (props) => {
   );
 };
 
-export default layout;
+export default LAYOUT;

@@ -40,7 +40,7 @@ const pizzaList = [
     pricingText: "Price:: 180 RS (10% of on MRP)",
   },
   {
-    name: "Non Veg Supreme",
+    name: "Chicken Fiesta",
     content:
       "Dominos introduces 'Chicken Fiesta' an exotic new Pizza. Topped with Chunky Chicken, Capsicum & Onions",
     price: 290,

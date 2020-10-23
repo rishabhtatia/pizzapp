@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ListComponent from "./ListComponent/ListComponent";
 import styles from "./ListComponents.module.css";
 
-const ListComponents = (props) => {
-  let pizzaList = props.pizzaList.map((item) => {
+const LISTCOMPONENTS = (props) => {
+  const pizzaList = props.pizzaList.map((item) => {
     return (
       <ListComponent
         item={item}
@@ -16,4 +17,9 @@ const ListComponents = (props) => {
   return <div className={styles.pizzaContainer}>{pizzaList}</div>;
 };
 
-export default ListComponents;
+LISTCOMPONENTS.protoTypes = {
+  pizzaList: PropTypes.array,
+  OrderSummaryHandler: PropTypes.func,
+};
+
+export default LISTCOMPONENTS;

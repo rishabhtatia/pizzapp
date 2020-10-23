@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styles from "./ListComponent.module.css";
+
 const images = require.context("../../../assests/images", true);
 
-const ListComponent = ({ item, OrderSummaryHandler }) => {
+const LISTCOMPONENT = ({ item, OrderSummaryHandler }) => {
   const data = { name: item.name, price: item.price };
   return (
     <div className={styles.ListComponent}>
@@ -24,4 +26,10 @@ const ListComponent = ({ item, OrderSummaryHandler }) => {
   );
 };
 
-export default ListComponent;
+LISTCOMPONENT.propTypes = {
+  item: PropTypes.object,
+  key: PropTypes.string,
+  OrderSummaryHandler: PropTypes.func,
+};
+
+export default LISTCOMPONENT;
