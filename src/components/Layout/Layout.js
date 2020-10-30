@@ -5,7 +5,7 @@ import styles from "./Layout.module.css";
 const LAYOUT = (props) => {
   return (
     <Aux>
-      <h1 className={styles.Heading}>PIZZA ORDER APP</h1>
+      <h1 className={styles.heading}>PIZZA ORDER APP</h1>
       <main>{props.children}</main>
     </Aux>
   );

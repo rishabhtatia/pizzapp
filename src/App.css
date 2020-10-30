@@ -1,18 +1,18 @@
-.Navbar ul {
+.navBar ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.Navbar li {
+.navBar li {
   display: inline;
   margin: 10px;
 }
 
-.Navbar a {
+.navBar a {
   color: white;
 }
 
-.Navbar {
+.navBar {
   background-color: red;
 }

@@ -1,19 +1,19 @@
-.PostList li {
+.postList li {
   list-style: none;
 }
 
-.PostList ul {
+.postList ul {
   padding: 0;
 }
 
-.PostList {
+.postList {
   display: grid;
   justify-items: center;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-gap: 10px 0;
   margin: 0 0 10px 0;
 }
-.Loader {
+.loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;

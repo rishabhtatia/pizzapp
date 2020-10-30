@@ -1,13 +1,13 @@
 import React from "react";
 import Aux from "../../../hoc/Auxilary";
-import styles from "./SideDrawer.module.css";
+import styles from "./Sidedrawer.module.css";
 import Backdrop from "../Backdrop/Backdrop";
 
 const SIDEDRAWER = (props) => {
-  let attachedClasses = [styles.SideDrawer, styles.Close];
+  let attachedClasses = [styles.sideDrawer, styles.close];
   let AlbumList = [];
   if (props.open) {
-    attachedClasses = [styles.SideDrawer, styles.Open];
+    attachedClasses = [styles.sideDrawer, styles.open];
     AlbumList = [...new Set(props.postsList.map((post) => post.albumId))];
     AlbumList = AlbumList.map((item) => (
       <h2 key={item} onClick={() => props.filterPosts(item)}>

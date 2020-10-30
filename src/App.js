@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav className="Navbar">
+        <nav className="navBar">
           <ul>
             <li>
               <Link to="/pizzaapp">Pizza App</Link>
