@@ -7,7 +7,7 @@ const MODAL = (props) => {
   const TotalPrice = orderList.reduce((sum, curr) => curr.price + sum, 0);
   return (
     <div
-      className={styles.Modal}
+      className={styles.modal}
       style={{
         transform: props.show ? "translateY(0)" : "translateY(-100vh)",
         opacity: props.show ? "1" : "0",
@@ -28,7 +28,7 @@ const MODAL = (props) => {
               <td>
                 <button
                   type="button"
-                  className={styles.CancelButton}
+                  className={styles.cancelButton}
                   onClick={() => item.action(item)}
                 >
                   X
@@ -40,12 +40,12 @@ const MODAL = (props) => {
         </tbody>
       </table>
       <h3>TOTAL:: {TotalPrice}</h3>
-      <button className={styles.Button} type="submit">
+      <button className={styles.button} type="submit">
         PLACE YOUR ORDER
       </button>
       <button
         type="button"
-        className={styles.Button}
+        className={styles.button}
         onClick={() => props.setModal(false)}
       >
         CLOSE CART
