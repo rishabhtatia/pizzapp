@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6cdc79e3.chunk.css",
+    "main.js": "/static/js/main.d60846f8.chunk.js",
+    "main.js.map": "/static/js/main.d60846f8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.255b576e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.255b576e.js.map",
+    "static/js/2.c377dc9b.chunk.js": "/static/js/2.c377dc9b.chunk.js",
+    "static/js/2.c377dc9b.chunk.js.map": "/static/js/2.c377dc9b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a0312c01d733c3afb2f47df22a0ba37c.js": "/precache-manifest.a0312c01d733c3afb2f47df22a0ba37c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6cdc79e3.chunk.css.map": "/static/css/main.6cdc79e3.chunk.css.map",
+    "static/js/2.c377dc9b.chunk.js.LICENSE.txt": "/static/js/2.c377dc9b.chunk.js.LICENSE.txt",
+    "static/media/Chicken_Fiesta.jpg": "/static/media/Chicken_Fiesta.b602ea9b.jpg",
+    "static/media/Chicken_Golden_Delight.jpg": "/static/media/Chicken_Golden_Delight.65b675a4.jpg",
+    "static/media/Dominator.jpg": "/static/media/Dominator.bfdf133d.jpg",
+    "static/media/Farmhouse.jpg": "/static/media/Farmhouse.52efa3a0.jpg",
+    "static/media/Margherita.jpg": "/static/media/Margherita.ba0bda3d.jpg",
+    "static/media/Non-Veg_Supreme.jpg": "/static/media/Non-Veg_Supreme.68417b1d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.255b576e.js",
+    "static/js/2.c377dc9b.chunk.js",
+    "static/css/main.6cdc79e3.chunk.css",
+    "static/js/main.d60846f8.chunk.js"
+  ]
+}
